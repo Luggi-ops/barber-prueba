@@ -18,9 +18,17 @@ body{
 /**Globales**/
 
 .contenedor{
-    max-width: 120rem;
-    width: 90%;
+    max-width: 40rem;
+    width: 95%;
     margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        max-width: 90rem;
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 h1, h2, h3, h4{
@@ -28,7 +36,7 @@ h1, h2, h3, h4{
 }
 
 h1{
-    font-size: 4.8rem;
+    font-size: 7rem;
     font-weight: 500;
 }
 
@@ -57,7 +65,9 @@ img{
 /**Header**/
 
 /**Barra**/
-
+.logo{
+    max-width: 10rem;
+}
 .barra{
     background-color: #ffffff;
     display: block;
@@ -84,8 +94,9 @@ img{
 @media (min-width: 768px) {
     .navegacion li{
         display: inline;
-        margin: 0 3rem;
+        margin: 0 1.5rem;
         padding-bottom: 2rem;
+        font-size: 1.5rem;
     }
 
 
@@ -104,7 +115,7 @@ img{
 
 @media (min-width: 768px) {
     .fondo-header{
-        height: 100vh;
+        height: calc(100vh - 13.345rem); 
         background-attachment: fixed;
     }
 }
@@ -112,42 +123,14 @@ img{
 .text-header{
     text-align: center;
     color: #ffffff;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 }
 
-@media (min-width: 480px) {
-    .text-header{
-        position: relative;
-        top: 4rem;
-    }
-}
-
-
-
-@media (min-width: 768px) {
-    .text-header{
-        position: relative;
-        top: 0rem;
-    }
-
-    .text-header h1{
-        font-size: 10rem;
-        position: relative;
-        top: 25rem;
-    }
-    
-    .p1{
-        position: relative;
-        font-size: 8rem;
-        top: 18rem;
-    }
-
-    .p2{
-        position: relative;
-        font-size: 5rem;
-        top: 18rem;
-    }
-}
 
 .p1{
     font-family: 'Playfair Display', serif;
@@ -164,22 +147,46 @@ img{
 /**Precios**/
 
 .precios{
-    margin-top: 4rem;
+    background-color: #171717;
+}
+.contenedor-precios{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 50rem;
+    width: 95%;
+    margin: 0rem auto;
+}
+@media (min-width: 995px) {
+    .contenedor-precios{
+        max-width: 90rem;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+.corte__promo{
+    order: -1;
+}
+
+@media (min-width: 995px) {
+    .corte__promo{
+        order: unset;
+    }
 }
 
 @media (min-width: 768px) {
-    .precios{
+    .contenedor-precios{
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
     }
 }
 
 .corte{
-    max-width: 35rem;
+    max-width: 40rem;
     max-height: 70rem;
     margin: 2rem auto;
     border: 1px solid #171717;
+    background-color: #ffffff;
 }
 
 @media (min-width: 768px) {
@@ -200,6 +207,11 @@ img{
     border-bottom: 1px solid #171717;
 }
 
+.imagen-promo__img{
+    min-width: 20rem;
+}
+
+
 .text-corte__h3{
     width: 25rem;
     text-align: center;
@@ -218,8 +230,7 @@ img{
 
 /**Botones**/
 
-.btn{
-    background-color: #f75a5a;
+.btn{ 
     color: #ffffff;
     text-decoration: none;
     text-align: center;
@@ -227,6 +238,24 @@ img{
     display: block;
     margin: 1rem auto;
     max-width: 25rem;
+}
+
+.btn__corte{
+    background-color: #f75a5a;
+}
+
+.btn__corte:hover{
+    background-color: #171717e6;
+}
+
+.btn__promo{
+    background-color: #171717;
+}
+
+.btn__promo:hover{ 
+    color: #171717;
+    background-color: #76e6f6;
+
 }
 
 @media (min-width: 768px) {
@@ -238,6 +267,81 @@ img{
     }
 }
 
-.btn:hover{
-    background-color: #171717e6;
+/**HORARIOS**/
+
+.horarios{
+    padding: 4rem 0;
+}
+
+.horarios__text{
+    text-align: start;
+}
+
+@media (min-width: 768px) {
+    .horarios__text{
+        text-align: center;
+    }
+}
+
+.horarios__text-list{
+    list-style: none;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #343334;
+}
+
+.horarios__heading{
+    font-weight: 300;
+    color: #f75a5a;
+    text-transform: uppercase;
+}
+
+
+/**FORMULARIO**/
+
+.form-heading{
+    font-weight: 300;
+    color: #171717;
+    text-transform: uppercase;
+}
+
+.form-contactanos{
+    background-color: #e4e4e4;
+    padding: 4rem 0;
+}
+
+input{
+    background-color: #e4e4e4;
+    display: block;
+    border: none;
+    border-bottom: 0.5px solid #171717;
+    margin-bottom: 0.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    line-height: 2;
+    padding-left: 1rem;
+    width: 100%;
+}
+
+textarea{
+    display : block;
+    appearance: none;
+    color: #171717;
+    background-color: #e4e4e4;
+    resize: none;
+    border: none;
+    border-bottom: 0.5px solid #171717;
+    padding: 1rem 0 0 1rem;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    width: 100%;
+
+}
+
+.btn-form{
+    background-color: #171717;
+    padding: 0rem 3rem;
+    font-family: 'Italianno', cursive;
+    font-size: 3rem;
+    color: #ffffff;
 }

@@ -1,0 +1,243 @@
+html{
+    font-size: 62.5%; /**equivalente para 1rem = 10px**/
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
+/**Globales**/
+
+.contenedor{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Playfair Display', serif;
+}
+
+h1{
+    font-size: 4.8rem;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3.2rem;
+}
+
+h4{
+    font-size: 2.6rem;
+}
+
+img{
+    max-width: 100%; /**Imagenes adaptables al ancho de los dispositivos**/
+}
+
+/**Utilidades**/
+
+.centrar-texto{
+    text-align: center;
+}
+
+/**Header**/
+
+/**Barra**/
+
+.barra{
+    background-color: #ffffff;
+    display: block;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.barra ul{
+    padding: 0;
+    list-style: none;
+}
+
+.barra ul li a{
+    text-decoration: none;
+    color: #343334;
+}
+
+.navegacion__a--celeste:hover{
+    color: #76e6f6;
+}
+.navegacion__a--rojo:hover{
+    color: #f75a5a;
+}
+@media (min-width: 768px) {
+    .navegacion li{
+        display: inline;
+        margin: 0 3rem;
+        padding-bottom: 2rem;
+    }
+
+
+}
+
+/**Site-Header**/
+
+.fondo-header{
+    background: url(../img/header1.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 45rem;
+}
+
+@media (min-width: 768px) {
+    .fondo-header{
+        height: 100vh;
+        background-attachment: fixed;
+    }
+}
+
+.text-header{
+    text-align: center;
+    color: #ffffff;
+    
+}
+
+@media (min-width: 480px) {
+    .text-header{
+        position: relative;
+        top: 4rem;
+    }
+}
+
+
+
+@media (min-width: 768px) {
+    .text-header{
+        position: relative;
+        top: 0rem;
+    }
+
+    .text-header h1{
+        font-size: 10rem;
+        position: relative;
+        top: 25rem;
+    }
+    
+    .p1{
+        position: relative;
+        font-size: 8rem;
+        top: 18rem;
+    }
+
+    .p2{
+        position: relative;
+        font-size: 5rem;
+        top: 18rem;
+    }
+}
+
+.p1{
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+}
+
+.p2{
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-style: oblique;
+}
+
+
+/**Precios**/
+
+.precios{
+    margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+    .precios{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.corte{
+    max-width: 35rem;
+    max-height: 70rem;
+    margin: 2rem auto;
+    border: 1px solid #171717;
+}
+
+@media (min-width: 768px) {
+    .corte{
+        margin: 2rem;
+    }
+}
+
+.imagen-corte{
+    overflow: hidden;
+}
+
+.imagen-corte__img{
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+    object-position: top;
+    border-bottom: 1px solid #171717;
+}
+
+.text-corte__h3{
+    width: 25rem;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0 auto;
+    border-bottom: 1px solid #746f6f;
+}
+
+.text-corte__p{
+    text-align: start;
+    width: 25rem;
+    margin: 1rem auto;
+}
+
+/**Botones**/
+
+.btn{
+    background-color: #f75a5a;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    padding: 2rem 3rem;
+    display: block;
+    margin: 1rem auto;
+    max-width: 25rem;
+}
+
+@media (min-width: 768px) {
+    .btn{
+    display: inline-block;
+    padding: 1rem 1rem;
+    margin-left: 2rem;
+    font-size: 1.5rem;
+    }
+}
+
+.btn:hover{
+    background-color: #171717e6;
+}
